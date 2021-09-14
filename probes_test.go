@@ -56,7 +56,7 @@ func TestClient_GetProbe(t *testing.T) {
 	gock.InterceptClient(c.client)
 	defer gock.RestoreClient(c.client)
 
-	rp, err := c.GetProbe(0)
+	rp, _ := c.GetProbe(0)
 
 	var jft Probe
 

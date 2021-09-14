@@ -20,10 +20,10 @@ var (
 )
 
 // checkQueryParam checks against possible list of parameters
-func checkQueryParam(arg string, list map[string]bool) bool {
-	_, ok := list[strings.ToUpper(arg)]
-	return ok
-}
+//func checkQueryParam(arg string, list map[string]bool) bool {
+//	_, ok := list[strings.ToUpper(arg)]
+//	return ok
+//}
 
 // init injects our "dns" related commands/options.
 func init() {

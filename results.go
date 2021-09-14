@@ -48,7 +48,7 @@ func (c *Client) FetchResult(url string) (string, error) {
 	c.debug("req=%#v", req)
 	c.debug("url=%s", req.URL.String())
 
-	resp, err := c.call(req)
+	resp, _ := c.call(req)
 	body, err := c.handleAPIResponse(resp)
 	if err != nil {
 		return "", errors.Wrap(err, "FetchResult")

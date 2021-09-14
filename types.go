@@ -150,6 +150,7 @@ type Measurement struct {
 	Protocol              string                 `json:"protocol"`
 	ResolveOnProbe        bool                   `json:"resolve_on_probe"`
 	ResolvedIPs           []string               `json:"resolved_ips"`
+	Tags                  []string               `json:"tags"`
 	ResponseTimeout       int                    `json:"response_timeout"`
 	Result                string                 `json:"result"`
 	Size                  int                    `json:"size"`
@@ -158,6 +159,7 @@ type Measurement struct {
 	Status                struct {
 		ID   int    `json:"id"`
 		Name string `json:"name"`
+		When int    `json:"when"`
 	} `json:"status"`
 	StopTime  int    `json:"stop_time"`
 	Target    string `json:"target"`

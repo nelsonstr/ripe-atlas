@@ -16,7 +16,7 @@ var ErrAPIKeyIsMandatory = errors.New("API call requires an API key")
 // ErrInvalidAPIAnswer
 var ErrInvalidError = errors.New("Invalid request")
 
-var lastError APIError
+//var lastError APIError
 
 func (e APIError) Error() string {
 	return e.Err.Detail

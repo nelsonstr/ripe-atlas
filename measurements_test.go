@@ -87,7 +87,7 @@ func TestClient_DeleteMeasurement_Ok(t *testing.T) {
 	myurl, _ := url.Parse(apiEndpoint)
 
 	myrp := Measurement{ID: 666}
-	jrp, err := json.Marshal(myrp)
+	jrp, _ := json.Marshal(myrp)
 
 	gock.New(apiEndpoint).
 		Delete(fmt.Sprintf("measurements/%d/", pkNumber)).
@@ -104,7 +104,7 @@ func TestClient_DeleteMeasurement_Ok(t *testing.T) {
 	gock.InterceptClient(c.client)
 	defer gock.RestoreClient(c.client)
 
-	err = c.DeleteMeasurement(pkNumber)
+	err := c.DeleteMeasurement(pkNumber)
 	assert.NoError(t, err)
 }
 

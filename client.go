@@ -32,7 +32,7 @@ func NewClient(cfgs ...Config) (*Client, error) {
 	}
 
 	// Set log levels
-	if c.config.Verbose == true {
+	if c.config.Verbose {
 		c.level = 1
 	}
 

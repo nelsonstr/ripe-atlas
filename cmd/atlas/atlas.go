@@ -52,10 +52,10 @@ var (
 	fMTags           string
 
 	// Create measurements
-	fBillTo    string
-	fIsOneOff  bool
-	fStartTime string
-	fStopTime  string
+	//fBillTo    string
+	fIsOneOff bool
+	//fStartTime string
+	//fStopTime  string
 
 	// HTTP
 	fHTTPMethod  string
@@ -337,5 +337,5 @@ func main() {
 
 	sort.Sort(ByAlphabet(cliCommands))
 	app.Commands = cliCommands
-	app.Run(os.Args)
+	_ = app.Run(os.Args)
 }

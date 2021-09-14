@@ -51,8 +51,8 @@ func TestClienthandleAPIResponse(t *testing.T) {
 		jsonErr string
 	)
 
-	client, err := NewClient()
-	_, err = client.handleAPIResponse(nil)
+	client, _ := NewClient()
+	_, err := client.handleAPIResponse(nil)
 	assert.Error(t, err)
 
 	fmt.Fprintf(&b, "%v", jsonErr)

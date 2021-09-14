@@ -55,7 +55,7 @@ func TestClient_GetCredits(t *testing.T) {
 	gock.InterceptClient(c.client)
 	defer gock.RestoreClient(c.client)
 
-	rp, err := c.GetCredits()
+	rp, _ := c.GetCredits()
 
 	var jft Credits
 
